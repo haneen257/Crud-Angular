@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Add Employee Form</h1>
+<div mat-dialog-content>
+  <form [formGroup]="employeeForm" >
+    <mat-form-field appearance="outline">
+      <mat-label>Employee Name</mat-label>
+      <input formControlName="empName" matInput placeholder="Enter your name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Employee Email</mat-label>
+      <input type="email" formControlName="empEmail" matInput placeholder="Enter your email">
+      <mat-error *ngIf="employeeForm.get('empEmail')?.errors?.['required']">email is requierd</mat-error>
+      <mat-error *ngIf="employeeForm.get('empEmail')?.errors?.['email']">email is invalid</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Employee Address</mat-label>
+      <input formControlName="empAddress" matInput placeholder="Enter your Address">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Employee Phone</mat-label>
+      <input formControlName="empPhone" matInput placeholder="Enter your Phone">
+      <mat-error *ngIf="employeeForm.get('empPhone')?.errors?.['required']">number is requierd</mat-error>
+
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" (click)="addEmployee()">{{actionBtn}}</button>
+</div>

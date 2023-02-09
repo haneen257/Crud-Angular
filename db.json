@@ -1,0 +1,21 @@
+{
+  "employeeList": [
+    {
+      "empName": "fsdg",
+      "empEmail": "hdsh@gbf",
+      "empAddress": "hsdhb",
+      "empPhone": "123345",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
